@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root {
+    --dark-cyan : hsl(183, 100%, 15%);
+    --dark-grayish : hsl(186, 14%, 43%);
+    --graying-cyan : hsl(184, 14%, 56%);
+    --light-grayish-cyan : hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --white : hsl(0 , 0% , 100%) ;
+    --primary-cyan : hsl(172, 67%, 45%);
+}
+
+body { 
+    margin : 0;
+    font-family: 'Space Mono', monospace;
+    background: var(--light-grayish-cyan);
+    width : 100%;
+    overflow : hidden;
+}
+
+.container , body{ 
+    display: grid;
+    height: 100vh;
+    place-content: center;
+}
+
+/* heading */
+header {
+    text-align: center;
+    transform: translateY(-75px);
+    font-size: xx-large;
+    letter-spacing: 5px;
+}
+/* APP */
+.app {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-evenly;
+    padding : 25px;
+    border-radius: 25px;
+}
+
+.app_left_options label {
+    letter-spacing: 2px;
+    color:hsl(186, 14%, 43%)
+}
+
+.bill_input_div {
+    background-color: var(--very-light-grayish-cyan);
+    padding: 1px;
+}
+
+.app_left_options input {
+    width: 275px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--very-light-grayish-cyan);
+    text-align: right;
+}
+
+.tips_grid {
+    display : grid;
+    grid-template-columns: repeat(3 , 75px);
+    gap: 15px;
+}
+
+.tips_grid button {
+    padding: 5px 0;
+    background-color: var(--dark-cyan); 
+    color: white;
+    font-weight: 700;  
+    font-size: large;
+    border-radius: 5px ;
+}
+
+.app_right_options {
+    background : var(--dark-cyan)
+}
