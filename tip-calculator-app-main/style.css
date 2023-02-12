@@ -35,45 +35,151 @@ header {
 .app {
     background-color: var(--white);
     display: flex;
-    justify-content: space-evenly;
+    gap: 50px;
     padding : 25px;
     border-radius: 25px;
 }
-
+.app_left_options{ 
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    width: 350px;
+}
 .app_left_options label {
     letter-spacing: 2px;
     color:hsl(186, 14%, 43%)
 }
 
-.bill_input_div {
+.bill_input_div , .people_input_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: var(--very-light-grayish-cyan);;
+    padding: 5px;
+}
+
+
+.bill_input_div span ,
+.people_input_div span  {
+    display: inline !important;
     background-color: var(--very-light-grayish-cyan);
-    padding: 1px;
+    padding: 12px;
 }
 
 .app_left_options input {
-    width: 275px;
     height: 30px;
     border-radius: 5px;
     border: none;
     background-color: var(--very-light-grayish-cyan);
     text-align: right;
+    width: 100%;
+    display: inline;
+    padding: 10px;
+    
 }
 
+.app_left_options input:focus {
+    outline:none;
+}
+
+.app_left_options input::-webkit-outer-spin-button,
+.app_left_options input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.app_left_options input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.app_left_options input::placeholder , .app_left_options input {
+    color: var(--dark-cyan) !important;
+    font-size: x-large;
+    font-weight: 800;
+}
+
+/* * TIPS GRID */
 .tips_grid {
     display : grid;
-    grid-template-columns: repeat(3 , 75px);
+    grid-template-columns: repeat(3 , auto);
     gap: 15px;
 }
 
 .tips_grid button {
-    padding: 5px 0;
+    padding: 13px 0;
     background-color: var(--dark-cyan); 
     color: white;
     font-weight: 700;  
     font-size: large;
     border-radius: 5px ;
+    cursor: pointer;
+    outline: none;
+    border : none;
+    min-width: 75px;
 }
 
-.app_right_options {
-    background : var(--dark-cyan)
+.tips_grid button:hover {
+    background-color: var(--primary-cyan);
 }
+
+.tips_grid button:last-child {
+    background-color: var(--very-light-grayish-cyan);
+    color: var(--dark-grayish)
+}
+
+
+
+/* APP RIGHT */
+.app_right_options {
+    background : var(--dark-cyan) ;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 375px;
+}
+
+.app_reset{
+    width: 90%;
+    background-color: var(--primary-cyan);
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 0;
+    font-size: large;
+    border-radius: 5px;
+    color: var(--dark-cyan);
+}
+
+.bill_main_content , .app_left_bill , .app_left_tip , .app_left_people {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bill_content_row { 
+    display : flex;
+    justify-content: space-between;
+    /* padding: 0 15px; */
+    align-items: center;
+    width: 300px;
+}
+
+.bill_content_row .bill_row_text {
+    color: white;
+}
+
+.bill_row_text span{
+    display: block;
+    color:hsl(184, 14%, 56%);
+}
+
+.bill_row_num {
+    color: var(--primary-cyan) ;
+    font-size : 40px;
+}
+
+
+
+
+/* app right options */
