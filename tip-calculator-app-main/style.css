@@ -82,11 +82,13 @@ header {
     outline:none;
 }
 
+
 .app_left_options input::-webkit-outer-spin-button,
 .app_left_options input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
 .app_left_options input[type=number] {
     -moz-appearance: textfield;
 }
@@ -97,10 +99,11 @@ header {
     font-weight: 800;
 }
 
+
 /* * TIPS GRID */
 .tips_grid {
     display : grid;
-    grid-template-columns: repeat(3 , auto);
+    grid-template-columns: repeat(3 , 100px);
     gap: 15px;
 }
 
@@ -117,14 +120,19 @@ header {
     min-width: 75px;
 }
 
+.tips_grid input {
+    background-color: var(--very-light-grayish-cyan);
+    color: var(--dark-grayish) ;
+    width: 85%;
+}
+
+.tips_grid input::placeholder{ 
+    font-size: 18px;
+}
 .tips_grid button:hover {
     background-color: var(--primary-cyan);
 }
 
-.tips_grid button:last-child {
-    background-color: var(--very-light-grayish-cyan);
-    color: var(--dark-grayish)
-}
 
 
 
@@ -178,8 +186,6 @@ header {
     color: var(--primary-cyan) ;
     font-size : 40px;
 }
-
-
 
 
 /* app right options */

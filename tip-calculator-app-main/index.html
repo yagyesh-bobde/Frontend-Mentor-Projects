@@ -16,7 +16,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
   <!-- FONTAWESOME -->
-  <script src="script.js"></script>
+  
   <script src="https://kit.fontawesome.com/ee31d545f8.js" crossorigin="anonymous" defer ></script>
 
 </head>
@@ -34,7 +34,7 @@
                  class="bill_input_label">Bill</label>
           <div class="bill_input_div" name="bill_input" >
             <span><i class="fa-solid fa-dollar-sign"></i></span>
-            <input type="number" inputmode="numeric" name="bill_input_input" id="bill_input_input" placeholder="0.0" >
+            <input onchange="updateCounter()" type="number" inputmode="numeric" name="bill_input_input" id="bill_input_input" placeholder="0.0" >
           </div>
         </div>
         <div class="app_left_tip">
@@ -46,8 +46,19 @@
               <button data-tip-button >15%</button>
               <button data-tip-button >25%</button>
               <button data-tip-button >50%</button>
-              <!-- Custom tip button -->
-              <button data-tip-custom >Custom</button>
+    <div 
+    onclick="custominput()"
+    >
+      <input data-tip-custom 
+      onclick="custominput()"
+      onblur="setCustom()"
+      type="number" 
+      placeholder="Custom"
+      disabled
+      name="custom" 
+      id="custom"
+      >
+    </div>
             </div>
         </div>
         <div class="app_left_people">
@@ -57,7 +68,9 @@
             <span class="people_icon">
               <i class="fa-solid fa-user"></i>
             </span>
-            <input type="number" inputmode="numeric" name="people_input" id="people_input" placeholder="0" >
+            <input type="number" inputmode="numeric" name="people_input" 
+            onchange="updateCounter()"
+            id="people_input" placeholder="0" >
           </div>
         </div>
       </div>
@@ -69,7 +82,7 @@
             <div class="bill_row_text">
               Tip Amount <span>/ person</span>
             </div>
-            <div class="bill_row_num">
+            <div id="tip_per_person" class="bill_row_num">
               $0.00
             </div>
           </div>
@@ -77,12 +90,15 @@
             <div class="bill_row_text">
               Total <span>/ person</span>
             </div>
-            <div class="bill_row_num">
+            <div id="total_per_person" class="bill_row_num">
               $0.00
             </div>
           </div>
         </div>
-        <button data-reset-bill class="app_reset">
+        <button data-reset-bill class="app_reset"
+        
+        onclick="doReset()"
+        >
           reset
         </button>
       </div>
@@ -93,5 +109,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Yagyesh Bobde</a>.
   </div>
+
+  <script src="./script.js"></script>
 </body>
 </html>
