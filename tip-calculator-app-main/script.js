@@ -38,8 +38,6 @@ function setTip(num) {
     updateCounter()
 }
 
-
-
 function tipPerPerson() {
     let total_people = parseInt(people.value)
     let value_  = bill.value ? parseInt(bill.value) : 0
@@ -59,18 +57,17 @@ function totalPerPerson() {
     total_per_person.innerHTML = `$${parseFloat(total).toPrecision(2)}`
 }
 
-
 function updateCounter() {
     tipPerPerson()
     totalPerPerson()
 }
-
 
 function doReset() {
     bill.value= ''
     bill.placeholder=0.0
     people.value=''
     people.placeholder = 0
+    updateCounter()
 }
 
 updateCounter()

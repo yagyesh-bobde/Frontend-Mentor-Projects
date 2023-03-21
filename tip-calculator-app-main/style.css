@@ -14,16 +14,14 @@ body {
     margin : 0;
     font-family: 'Space Mono', monospace;
     background: var(--light-grayish-cyan);
-    width : 100%;
-    overflow : hidden;
+    height : 100vh;
 }
 
-.container , body{ 
+.container { 
     display: grid;
     height: 100vh;
     place-content: center;
 }
-
 /* heading */
 header {
     text-align: center;
@@ -43,7 +41,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 45px;
-    width: 350px;
+    width: 75%;
 }
 .app_left_options label {
     letter-spacing: 2px;
@@ -103,7 +101,7 @@ header {
 /* * TIPS GRID */
 .tips_grid {
     display : grid;
-    grid-template-columns: repeat(3 , 100px);
+    grid-template-columns: repeat(3, 150px);
     gap: 15px;
 }
 
@@ -132,9 +130,6 @@ header {
 .tips_grid button:hover {
     background-color: var(--primary-cyan);
 }
-
-
-
 
 /* APP RIGHT */
 .app_right_options {
@@ -189,3 +184,36 @@ header {
 
 
 /* app right options */
+
+@media screen and (max-width : 480px) {
+    .app{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 50px;
+        padding: 15px 25px;
+    }
+    .app_right_options{ 
+        gap: 75px;
+    }
+
+    .container{ 
+        display: block;
+        height: 100%;
+        margin-top: 150px;
+    }
+    body {
+        height: 100%;
+    }
+
+    .tips_grid {
+        grid-template-columns: repeat(3, auto);
+    }
+    .app_right_options{
+        min-width: 0;
+        width: 100%;
+        margin: 0 10px;
+    }
+    
+}
