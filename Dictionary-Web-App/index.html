@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔍Dictionary</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css" defer>
+    <script src="https://kit.fontawesome.com/ee31d545f8.js"
+            crossorigin="anonymous" defer ></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav_logo">
+            <img src="assets/nav_icon_50.png" alt="" srcset="">
+        </div>
+        <div class="nav_right">
+                <select id="font_options" >
+                    <option value="serif" data-font-select >Serif</option>
+                    <option value="monospace" data-font-select >monospace</option>
+                </select>
+                <div class="toggle_mode" >
+                    <div class="toggle_mode_button">
+                    </div>
+                </div>
+                <img 
+                id="search_icon"
+                src="assets\nav_toggle_dark.png"
+                     alt=""
+                     width="20"
+                     srcset="">
+
+        </div>
+    </nav>
+    <main class="app">
+        <div class="search_box flex-center justify-between">
+            <input placeholder="Search..." type="text" name="search" id="search"  
+            onchange="searchMeaning()"
+            >
+            <img onclick="searchMeaning()" src="assets\search.png"  alt="" srcset="">
+        </div>
+
+
+
+        <div class="app_content">
+            <div class="word_header">
+                <div class="word_title">
+                    <heading id="word_heading">
+                        <!-- keyboard -->
+                    </heading>
+                    <subheading id="word_subtitle" class="word_subtitle">
+                        <!-- /'ki:bc:d/' -->
+                    </subheading>
+                </div>
+                <div class="word_play flex-center">
+                    <!-- background #e7cfff -->
+                   <img
+                   onclick="playAudio()" 
+                   src="assets\play.png" alt="" srcset=""> 
+                </div>
+            </div>
+
+            <div class="word_div">
+                <section class="new_section">
+                    <hr>
+                    <legend>noun</legend>
+                </section>
+                <div class="word_div_desc flex-col">
+                    <h2 class="back_heading" >Meaning</h2>
+                    <ul class="flex-col" >
+                        
+                    </ul>
+    
+                    <h2 class="back_heading">
+                        Synonyms 
+                        <span>
+                            electronic keyboard
+                        </span>
+                    </h2>
+                </div>
+            </div>
+
+
+            <div class="word_div">
+                <section class="new_section">
+                    <legend>verb</legend>
+                    <hr  > 
+                </section>
+                <div class="word_div_desc flex-col">
+                <h2 class="back_heading">Meaning</h2>
+                <ul id="word_verb_list" class="flex-col word_verb_list">
+                </ul>
+                </div>
+            </div>
+            <footer class="footer flex">
+                <p>
+                    Source
+                </p>
+                <div>
+                    <a id="source_url" href=""
+                       target="_blank">
+                        
+                    </a>
+                    <img src="assets/link.svg"
+                         width="10px"
+                         alt="link">
+                </div>
+            
+            </footer>
+        </div>
+
+
+        <div class="empty_screen">
+            Search For A Word 
+        </div>
+    </main>
+    <hr>
+    
+
+    <audio autoplay>
+        <source id="word_audio_src" src="" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
