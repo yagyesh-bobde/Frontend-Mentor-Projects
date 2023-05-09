@@ -104,7 +104,8 @@ body {
 }
 .priceSmall{ 
     color: var(--dark-grayish-blue);
-    font-weight: 600;
+    font-weight: 400 !important;
+    text-decoration:line-through;
 }
 /* right button */
 .cardRight .cartBtn { 
