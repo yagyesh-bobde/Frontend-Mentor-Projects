@@ -34,7 +34,8 @@
   <td>Product Preview Card</td>
   <td>
   <center>
-    <a href="https://yagyesh-bobde.github.io/Dictionary-Web-App" target="_blank" >https://yagyesh-bobde.github.io/Dictionary-Web-App</a>
+    <a href="https://yagyesh-bobde.github.io/Frontend-Mentor-Projects/product-preview-card-component-main/" target="_blank" >
+    https://yagyesh-bobde.github.io/Frontend-Mentor-Projects/product-preview-card-component-main</a>
   </center>
   </td>
 </tr>
